@@ -2,6 +2,12 @@
 
 # ZDEM_Damage_Thresholds
 
+**Rock damage evolution and crack threshold analysis for ZDEM**
+
+[English](README.md) | [中文](README.zh-CN.md)
+
+![CI](https://github.com/Phoenix0531-sudo/ZDEM_Damage_Thresholds/actions/workflows/ci.yml/badge.svg)
+
 **ZDEM 岩石单轴压缩渐进破裂与损伤阈值分析系统**
 **Progressive Failure and Damage Threshold Analysis for ZDEM Uniaxial Compression Simulations**
 
