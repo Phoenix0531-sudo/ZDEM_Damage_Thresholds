@@ -1,26 +1,27 @@
 # ZDEM Damage Thresholds
 
-**Uniaxial damage evolution & crack thresholds from ZDEM micro-monitoring**
+**Rock damage evolution & crack threshold analysis for ZDEM.**
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-![CI](https://github.com/Phoenix0531-sudo/ZDEM_Damage_Thresholds/actions/workflows/ci.yml/badge.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+[![CI](https://github.com/Phoenix0531-sudo/ZDEM_Damage_Thresholds/actions/workflows/ci.yml/badge.svg)](https://github.com/Phoenix0531-sudo/ZDEM_Damage_Thresholds/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
-Batch-oriented analysis for **ZDEM uniaxial compression** micro-monitoring dumps: read `_id_1.dat` … `_id_5.dat` style series, synthesize volumetric strain, extract elastic parameters and progressive cracking thresholds (CC / CI / CD / UCS style markers), and render academic strain–energy figures via `plot2D/`.
+Rock damage evolution & crack threshold analysis for ZDEM.
 
-## Why this exists
+Strain–energy oriented plots and thresholds.
 
-Rock-mechanics papers need reproducible threshold picks and multi-panel figures. This repo codifies the pipeline instead of one-off notebooks.
 
 ## Features
 
-- Directory-driven batch over micro-monitoring files
-- Elastic parameter + progressive damage threshold extraction
-- Publication-oriented 2D plotting (`plot2D`)
-- Entry script: `ZDEM_main_plot_damage_and_thresholds_from_dir.py`
+- 🪨 Damage evolution analytics
+- 📉 Threshold / energy plots (`plot2D/`)
+- ✅ CI + tests
 
-## Install
+## Get started
+
+### Install
 
 ```bash
 git clone https://github.com/Phoenix0531-sudo/ZDEM_Damage_Thresholds.git
@@ -28,22 +29,18 @@ cd ZDEM_Damage_Thresholds
 pip install -r requirements.txt
 ```
 
-## Usage
-
-1. Put ZDEM micro-monitoring files in an experiment directory.
-2. Edit the global config block at the top of `ZDEM_main_plot_damage_and_thresholds_from_dir.py` (paths, plot options).
-3. Run:
+### Usage
 
 ```bash
-python ZDEM_main_plot_damage_and_thresholds_from_dir.py
+# run plot / analysis entries under plot2D/ as documented
+pytest tests/
 ```
 
 ## Project layout
 
 ```
-ZDEM_main_plot_damage_and_thresholds_from_dir.py
-plot2D/                 # file_io, zdem_core, zdem_plot
-tests/
+plot2D/
+tests/  docs/
 ```
 
 ## Related ZDEM tools
@@ -59,6 +56,11 @@ tests/
 | [ZDEM_Model_Editor](https://github.com/Phoenix0531-sudo/ZDEM_Model_Editor) | Model file visual editor |
 | [ZDEM_Archiver](https://github.com/Phoenix0531-sudo/ZDEM_Archiver) | Purge / archive bulky simulation dumps |
 | [ZDEM3D_WEB](https://github.com/Phoenix0531-sudo/ZDEM3D_WEB) | CAE cloud UI (Django + React + VTK.js) |
+
+## Notes
+
+Complements Bond Fracture with threshold-centric views.
+
 ## License
 
-MIT. Free for commercial use with attribution. See [LICENSE](LICENSE).
+MIT. Free for commercial use with attribution where applicable. See [LICENSE](LICENSE).
